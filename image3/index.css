@@ -1,0 +1,176 @@
+html {
+  scroll-behavior: smooth;
+  background: black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: gray;
+  text-shadow: 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff, 0 0 1px #fff;
+  user-select: none;
+  font-family: Inter;
+  line-height: 150%;
+  background-color: black;
+  background-image: url('./assets/images/image3.jpg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  min-height: 100vh;
+}
+
+.header {
+  height: 60px;
+  padding: 10px;
+  z-index: 1;
+  display: flex;
+}
+
+.header__btn {
+  transition: 0.5s;
+}
+
+.header__btn img {
+  width: 40px;
+  filter: invert(1);
+}
+
+.header__btn:active {
+  transform: scale(0.8);
+  transition: 0.2s;
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+}
+
+.creative {
+  max-width: 500px;
+  padding: 10px;
+  height: 100vh;
+  max-height: 720px;
+  min-height: 500px;
+  border: solid 20px white;
+  border-radius: 3px;
+  background-image: url('./assets/images/image3.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.creative__logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: "Iowan Old Style";
+  font-size: 2rem;
+  transition: 0.7s;
+  filter: invert(0.5);
+}
+
+.creative__title {
+  width: 100%;
+}
+
+.creative__header {
+  width: 100%;
+}
+
+.creative__main {
+  width: 100%;
+}
+
+.creative__btn {
+  display: block;
+  margin: auto;
+  font-weight: 700;
+  background: rgba(255, 255, 0, 0.4);
+  border: none;
+  color: white;
+  border-radius: 5px;
+  height: 50px;
+  width: 200px;
+  transition: 0.5s;
+}
+
+.creative__btn:hover {
+  cursor: pointer;
+  background: rgba(255, 255, 0, 0.7);
+  transform: scale(1.1);
+}
+
+.creative__btn:active {
+  transition: 0.2S;
+  transform: scale(0.8);
+}
+
+.creative__footer {
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.creative__footer a {
+  text-shadow: none;
+  display: block;
+  width: 100%;
+  text-align: right;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+*::-webkit-scrollbar-track:hover {
+  background-color: rgba(0, 0, 0, 0);
+}
+*::-webkit-scrollbar-track:active {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: white;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+*::-webkit-scrollbar-thumb:active {
+  background-color: white;
+}
