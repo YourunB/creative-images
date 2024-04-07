@@ -1,0 +1,10 @@
+html {
+  scroll-behavior: smooth;
+  background: black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
