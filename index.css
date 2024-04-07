@@ -1,0 +1,147 @@
+html {
+  scroll-behavior: smooth;
+  background: black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body {
+  min-height: 100vh;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  user-select: none;
+  font-family: Inter;
+  line-height: 150%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./image1/assets/images/image1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+}
+
+.creative {
+  z-index: 1;
+  max-width: 1280px;
+  height: 100vh;
+  max-height: 720px;
+  min-height: 500px;
+  border: solid 20px white;
+  border-radius: 3px;
+  background-image: url('./image1/assets/images/image1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-rows: 1fr 2fr 1fr;
+}
+
+.creative__logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: "Iowan Old Style";
+  font-size: 2rem;
+  transition: 0.7s;
+}
+
+.creative__image {
+  width: 100%;
+}
+
+.creative__btn {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: none;
+  background: none;
+  color: white;
+  font-weight: 700;
+  backdrop-filter: blur(5px);
+  transition: 0.5s;
+  animation: pulse 1s infinite ease-in;
+}
+
+.creative__title {
+  width: 100%;
+}
+
+.creative__tagline {
+  position: relative;
+  width: 100%;
+  text-align: center;
+  background: white;
+  color: black;
+  padding: 20px 0 0 0;
+  border-top-left-radius: 200%;
+  border-top-right-radius: 200%;
+  margin: 0;
+}
+
+.creative__header {
+  padding: 10px;
+}
+
+.creative__main {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.creative__footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+@media (hover:hover) {
+  .creative__btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    animation: none;
+    background: white;
+    color: black;
+  }
+}
+
+.creative__btn:active {
+  transition: 0.2s;
+  transform: scale(0.9);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 white;
+  }
+  50% {
+    box-shadow: 0 0 10px 10px white;
+    backdrop-filter: blur(0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 white;
+  }
+}
