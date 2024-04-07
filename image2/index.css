@@ -143,11 +143,6 @@ span {
   transition: 0.5s;
 }
 
-.content__btn:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-}
-
 .content__btn:active {
   transition: 0.2;
   transform: scale(0.8);
@@ -185,5 +180,49 @@ span {
   .header__btn:hover {
     cursor: pointer;
     transform: scale(1.2);
+  }
+
+  .content__btn:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+  }
+}
+
+@media (max-width: 768px) {
+  .creative {
+    display: block;
+    height: fit-content;
+    background: url('./assets/images/image2.png') no-repeat center;
+    background-size: cover;
+  }
+
+  .creative__right__img {
+    display: none;
+  }
+
+  .creative__right__img_full {
+    display: none;
+  }
+
+  .content {
+    position: static;
+    width: 100%;
+  }
+}
+
+@media (max-width: 468px) {
+  .content {
+    border: none;
+    border-radius: 0;
+    justify-content: center;
+    padding: 10px;
+    background: rgba(15, 32, 39, 0.5);
+    background: linear-gradient(to right, rgba(44, 83, 100, 0.5), rgba(32, 58, 67, 0.5), rgba(15, 32, 39, 0.5));
+  }
+
+  .content__btn {
+    min-height: 50px;
+    border-radius: 3px;
+    border: 0;
   }
 }
