@@ -1,0 +1,109 @@
+html {
+  scroll-behavior: smooth;
+  background: black;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  color: white;
+  user-select: none;
+  font-family: Inter;
+  line-height: 150%;
+  background-color: black;
+  background-image: url('./assets/images/image2.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: fixed;
+  z-index: 0;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  min-height: 100vh;
+}
+
+.header {
+  height: 60px;
+  padding: 10px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.header__btn {
+  transition: 0.5s;
+}
+
+.header__btn img {
+  width: 40px;
+  filter: invert(1);
+}
+
+.next {
+  transform: rotate(180deg);
+}
+
+.header__btn:active {
+  transform: scale(0.8);
+  transition: 0.2s;
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+}
+
+.creative {
+  max-width: 1280px;
+  height: 100vh;
+  max-height: 720px;
+  min-height: 500px;
+  border: solid 20px white;
+  border-radius: 3px;
+  background-image: url('./assets/images/image1.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.creative__logo {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-family: "Iowan Old Style";
+  font-size: 2rem;
+  transition: 0.7s;
+}
+
+@media (hover:hover) {
+  .header__btn:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+  }
+}
