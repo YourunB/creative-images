@@ -30,6 +30,7 @@ body {
 
 .overlay {
   position: fixed;
+  z-index: 0;
   left: 0;
   top: 0;
   width: 100%;
@@ -38,7 +39,7 @@ body {
   min-height: 100vh;
 }
 
-header {
+.header {
   height: 60px;
   padding: 10px;
   z-index: 1;
@@ -61,7 +62,8 @@ header {
   transition: 0.2s;
 }
 
-main {
+.main {
+  position: relative;
   z-index: 2;
   display: flex;
   justify-content: center;
