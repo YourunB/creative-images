@@ -143,11 +143,6 @@ span {
   transition: 0.5s;
 }
 
-.content__btn:active {
-  transition: 0.2;
-  transform: scale(0.8);
-}
-
 .content__contacts {
   width: 100%;
   display: flex;
@@ -186,6 +181,11 @@ span {
     cursor: pointer;
     transform: scale(1.05);
   }
+}
+
+.content__btn:active {
+  transition: 0.2;
+  transform: scale(0.8);
 }
 
 @media (max-width: 768px) {
