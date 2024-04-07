@@ -77,7 +77,9 @@ body {
 }
 
 .creative {
+  position: relative;
   max-width: 1280px;
+  width: 100%;
   height: 100vh;
   max-height: 720px;
   min-height: 500px;
@@ -91,7 +93,32 @@ body {
   grid-template-columns: 1fr 1fr;
 }
 
-.creative__logo {
+.content {
+  position: absolute;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 10px 20% 10px 10px;
+  height: 100%;
+  background: white;
+  border-bottom-right-radius: 50%;
+  border-top-right-radius: 50%;
+  border-right: solid 20px yellow;
+  width: 60%;
+  background: #0F2027;
+  background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+}
+
+.content__title {
+  text-align: center;
+}
+
+span {
+  color: yellow;
+}
+
+.content__logo {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -99,6 +126,59 @@ body {
   font-family: "Iowan Old Style";
   font-size: 2rem;
   transition: 0.7s;
+}
+
+.content__btn {
+  background:white;
+  color: #0F2027;
+  font-weight: 700;
+  font-size: 1rem;
+  border: none;
+  border-right: yellow solid 10px;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  outline: none;
+  min-height: 80px;
+  width: 120px;
+  transition: 0.5s;
+}
+
+.content__btn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+.content__btn:active {
+  transition: 0.2;
+  transform: scale(0.8);
+}
+
+.content__contacts {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.creative__right {
+  overflow: hidden;
+}
+
+.creative__right__img {
+  height: 100%;
+  visibility: hidden;
+}
+
+.creative__right__img_full {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 70%;
+  right: 0;
+  top: 0;
 }
 
 @media (hover:hover) {
